@@ -22,11 +22,11 @@ nvim_tree.setup({
 				default = "",
 				symlink = "",
 				folder = {
-					arrow_open = "",
-					arrow_closed = "",
-					default = "",
-					open = "",
-					empty = "",
+					arrow_open = "^",
+					arrow_closed = "`^",
+					default = "📁",
+					open = "-",
+					empty = "e",
 					empty_open = "",
 					symlink = "",
 					symlink_open = "",
@@ -34,7 +34,7 @@ nvim_tree.setup({
 				git = {
 					unstaged = "+",
 					staged = "S",
-					unmerged = "",
+					unmerged = "⑂",
 					renamed = "➜",
 					untracked = "U",
 					deleted = "D",
@@ -47,14 +47,14 @@ nvim_tree.setup({
 		enable = true,
 		show_on_dirs = true,
 		icons = {
-			hint = "",
-			info = "",
-			warning = "",
-			error = "",
+			hint = "h",
+			info = "i",
+			warning = "w",
+			error = "e",
 		},
 	},
 	view = {
-		width = 30,
+		width = 25,
 		side = "left",
 		mappings = {
 			list = {
