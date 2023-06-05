@@ -58,10 +58,9 @@ return packer.startup(function(use)
 	use({ "folke/which-key.nvim" })
 
 	-- Colorschemes
-	use({ "folke/tokyonight.nvim", commit = "66bfc2e8f754869c7b651f3f47a2ee56ae557764" })
 	use({ "lunarvim/darkplus.nvim", commit = "13ef9daad28d3cf6c5e793acfc16ddbf456e1c83" })
-  use({ "bluz71/vim-moonfly-colors", commit = "58e58e6d8c8214133fe0787ab16a9b35450e5df3" })
-  use({ "Mofiqul/vscode.nvim", commit = "dc5f37603ada51db13bc4009cbee628c5857a274" })
+	use({ "Mofiqul/vscode.nvim", commit = "dc5f37603ada51db13bc4009cbee628c5857a274" })
+	use({ "jaredgorski/SpaceCamp", commit = "fab8e52ec7d67000c8d96028b2d643573a4289b1" })
 	-- Cmp
 	use({ "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" }) -- The completion plugin
 	use({ "hrsh7th/cmp-buffer", commit = "3022dbc9166796b644a841a02de8dd1cc1d311fa" }) -- buffer completions
@@ -94,12 +93,14 @@ return packer.startup(function(use)
 	use({ "lewis6991/gitsigns.nvim", commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2" })
 	use({ "pineapplegiant/spaceduck", commit = "350491f19343b24fa85809242089caa02d4dadce" })
 	-- Automatically set up your configuration after cloning packer.nvim
-  use({
-    "iamcco/markdown-preview.nvim",
-    run = function() vim.fn["mkdp#util#install"]() end,
-  })
-
-  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = "cd app && npm install",
+		setup = function()
+			vim.g.mkdp_filetypes = { "markdown" }
+		end,
+		ft = { "markdown" },
+	})
 
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
